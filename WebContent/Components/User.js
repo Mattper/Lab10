@@ -52,7 +52,7 @@ $(document).on("click", ".btnUpdate", function(event)
 		$("#userAccountID").val($(this).closest("tr").find('td:eq(5)').text());
 		$("#userMeterNb").val($(this).closest("tr").find('td:eq(6)').text());
 		$("#userLoadType").val($(this).closest("tr").find('td:eq(7)').text());
-		$("#userReadingtype").val($(this).closest("tr").find('td:eq(8)').text());
+		$("#userReadingType").val($(this).closest("tr").find('td:eq(8)').text());
 		$("#userPaymentType").val($(this).closest("tr").find('td:eq(9)').text());
 });
 

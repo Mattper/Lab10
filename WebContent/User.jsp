@@ -21,7 +21,7 @@
 
 	<h1>User Management</h1>
 	
-	<form id="formUser" name="formUser" method="post" action="User.jsp">
+	<form id="formUser" name="formUser">
 	
 		Name:
 		<input id="userName" name="userName" type="text" class="form-control form-control-sm">
