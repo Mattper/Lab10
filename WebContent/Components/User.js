@@ -23,7 +23,7 @@ $(document).on("click", "#btnSave", function(event)
 		}
 	
 	//if valid
-	var type = ($("#userID").val() == "") ? "POST" : "PUT";
+	var type = ($("#hidUserIDSave").val() == "") ? "POST" : "PUT";
 	
 	$.ajax(
 	{
@@ -43,7 +43,7 @@ $(document).on("click", "#btnSave", function(event)
 //update
 $(document).on("click", ".btnUpdate", function(event)
 {
-		$("#userID").val($(this).data("userID"));
+		$("#hidUserIDSave").val($(this).data("userID"));
 		$("#userName").val($(this).closest("tr").find('td:eq(0)').text());
 		$("#userAddr").val($(this).closest("tr").find('td:eq(1)').text());
 		$("#userRegion").val($(this).closest("tr").find('td:eq(2)').text());
@@ -63,7 +63,7 @@ $(document).on("click", ".btnRemove", function(event)
 	{
 		url : "userAPI",
 		type : "DELETE",
-		data : "userID=" + $(this).data("userID"),
+		data : "userID=" + $(this).data("userid"),
 		dataType : "text",
 		complete : function(response, status)
 		{
@@ -102,7 +102,7 @@ function onUserSaveComplete(response, status)
 		$("#alertError").show();
 	}
 	
-	$("#userID").val("");
+	$("#hidUserIDSave").val("");
 	$("#formUser")[0].reset();
 }
 
