@@ -49,7 +49,7 @@ public class userAPI extends HttpServlet {
 		Map paras =getParasMap(request);
 		
 		String output =userObj.updateUser(
-					paras.get("userID").toString(),
+					paras.get("hidUserIDSave").toString(),
 					paras.get("userName").toString(),
 					paras.get("userAddr").toString(),
 					paras.get("userRegion").toString(),
