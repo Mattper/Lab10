@@ -24,7 +24,7 @@ $(document).on("click", "#btnSave", function(event)
 	
 	//if valid
 	var type = ($("#hidUserIDSave").val() == "") ? "POST" : "PUT";
-	
+
 	$.ajax(
 	{
 		url : "userAPI",
@@ -43,7 +43,7 @@ $(document).on("click", "#btnSave", function(event)
 //update
 $(document).on("click", ".btnUpdate", function(event)
 {
-		$("#hidUserIDSave").val($(this).data("userID"));
+		$("#hidUserIDSave").val($(this).data("userid"));
 		$("#userName").val($(this).closest("tr").find('td:eq(0)').text());
 		$("#userAddr").val($(this).closest("tr").find('td:eq(1)').text());
 		$("#userRegion").val($(this).closest("tr").find('td:eq(2)').text());
