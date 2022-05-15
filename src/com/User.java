@@ -135,7 +135,7 @@ public class User {
 					 String cPaymentType = rs.getString("cusPaymentMethod");
 					 
 					 // Add into the html table
-					 output += "<tr><td><input id='hidUserIDSave' name='hidUserIDSave' type='hidden' value='"+cID+"'>" +cName+"</td>"; 
+					 output += "<tr><td><input id='hidUserIDUpdate' name='hidUserIDUpdate' type='hidden' value='"+cID+"'>" +cName+"</td>"; 
 					 output += "<td>" + cAddress + "</td>"; 
 					 output += "<td>" + cRegion + "</td>";
 					 output += "<td>" + cPostalCode + "</td>";
@@ -148,12 +148,14 @@ public class User {
 					 
 					
 					 // buttons
-					 output += "<td>"
+					/* output += "<td>"
 					 		+ "<input name='btnUpdate' type='button' value='Update'class='btnUpdate btn btn-secondary' data-userid='"+cID+"'>"
 					 		+ "</td> "
 					 		+ "<td>"
 					 		+ "<input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-userid='"+cID+"'>"
-					 		+ "</td>";
+					 		+ "</td>";*/
+					 
+					output += "<td><input name='btnUpdate'type='button' value='Update'class='btnUpdate btn btn-secondary'></td>"+ "<td><input name='btnRemove'type='button' value='Remove'class='btnRemove btn btn-danger'data-userid='"+ cID + "'>" + "</td></tr>";
 					 		
 				 }
 				 
